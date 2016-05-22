@@ -1,6 +1,6 @@
 # Dockerfile for Android Projects
 
-This is a Dockerfile to make minumum images for Android projects.
+This is a Dockerfile to make minumum images for Android projects, including gradle.
 No `ant`, `maven`, nor `android-ndk` are included.
 
 ## Included
@@ -9,6 +9,19 @@ No `ant`, `maven`, nor `android-ndk` are included.
 * Android SDK
 * Android Support Libraries
 * Google Play Services
+* Gradle build system
+
+### Versions
+
+* Android SDK: `24.4.1`
+* Android components: 
+ - platform-tools
+ - build-tools-`25.1.6`
+ -  android-`25`
+* Google components: 
+ - extra-android-m2repository
+ - extra-google-m2repository
+* Gradle: `2.13`
 
 ## Maintainance
 
@@ -16,15 +29,14 @@ No `ant`, `maven`, nor `android-ndk` are included.
 * Update components for major updates
   * You can find component ids by `android list sdk --all --extended`
 
-# Author
+# Authors
 
+Pooya Parsa <pooya@pi0.ir>
 FUJI Goro (gfx) <g.psy.va+github@gmail.com>
 
 # License
 
 The MIT License.
-
-Copyright (c) 2015 FUJI Goro <g.psy.va+github@gmail.com>.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
