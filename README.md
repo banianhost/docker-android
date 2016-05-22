@@ -1,7 +1,8 @@
 # Dockerfile for Android Projects
 
+[![Docker Repository on Quay](https://quay.io/repository/pooya/android/status "Docker Repository on Quay")](https://quay.io/repository/pooya/android)
+
 This is a Dockerfile to make minumum images for Android projects, including gradle.
-No `ant`, `maven`, nor `android-ndk` are included.
 
 ## Included
 
@@ -31,8 +32,8 @@ No `ant`, `maven`, nor `android-ndk` are included.
 
 # Authors
 
-Pooya Parsa <pooya@pi0.ir>
-FUJI Goro (gfx) <g.psy.va+github@gmail.com>
+* Pooya Parsa <pooya@pi0.ir>
+* FUJI Goro (gfx) <g.psy.va+github@gmail.com>
 
 # License
 
