@@ -6,23 +6,25 @@ This is a Dockerfile to make minumum images for Android projects, including grad
 
 ## Included
 
-* OpenJDK 8
+* OpenJDK 9
 * Android SDK
 * Android Support Libraries
 * Google Play Services
 * Gradle build system
+* NPM Build System
+* React-Native CLI
 
 ### Versions
 
 * Android SDK: `24.4.1`
 * Android components: 
- - platform-tools
- - build-tools-`25.1.6`
- -  android-`25`
+ - platform-tools: `24.0.1`
+ - build-tools: `24.0.2`
+ -  android-`23`
 * Google components: 
  - extra-android-m2repository
  - extra-google-m2repository
-* Gradle: `2.13`
+* Gradle: `3.0.0`
 
 ## Maintainance
 
