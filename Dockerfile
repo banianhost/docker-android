@@ -1,5 +1,5 @@
 # based on https://hub.docker.com/r/gfx2015/android/ with openjdk-8
-FROM java:8
+FROM openjdk:latest
 
 MAINTAINER Pooya Parsa <pooya@pi0.ir>
 
@@ -34,7 +34,7 @@ RUN curl -#L "https://downloads.gradle.org/distributions/gradle-${GRADLE_VERSION
 
 # Install Android SDK components
 
-ENV ANDROID_COMPONENTS platform-tools,build-tools-24.0.1,android-24,android-25
+ENV ANDROID_COMPONENTS platform-tools,build-tools-24.0.2,android-24
 RUN echo y | android update sdk --no-ui --all --filter "${ANDROID_COMPONENTS}" 
 
 ENV GOOGLE_COMPONENTS extra-android-m2repository,extra-google-m2repository,extra-google-google_play_services
