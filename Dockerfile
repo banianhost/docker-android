@@ -1,7 +1,7 @@
 # based on https://hub.docker.com/r/gfx2015/android/ with openjdk-8
 FROM openjdk:latest
 
-MAINTAINER Pooya Parsa <pooya@pi0.ir>
+# MAINTAINER Pooya Parsa <pooya@pi0.ir>
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -13,14 +13,14 @@ RUN dpkg --add-architecture i386 && \
     apt-get clean
 
 # Install node.js
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash \
+RUN curl -sL https://deb.nodesource.com/setup_7.x | bash \
   && apt-get install -y nodejs
 
-# Install react-native-cli
-RUN npm install -g react-native-cli
+# Install yarn & react-native-cli
+RUN npm install -g yarn react-native-cli
 
 # Download and untar SDK
-ENV ANDROID_SDK_URL http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
+ENV ANDROID_SDK_URL http://dl.google.com/android/android-sdk_r25.2.3-linux.tgz
 RUN curl -L "${ANDROID_SDK_URL}" | tar --no-same-owner -xz -C /usr/local
 ENV ANDROID_HOME /usr/local/android-sdk-linux
 ENV ANDROID_SDK /usr/local/android-sdk-linux
